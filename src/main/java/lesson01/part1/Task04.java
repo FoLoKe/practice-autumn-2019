@@ -1,4 +1,4 @@
-package lesson01.part1;
+﻿package lesson01.part1;
 
 public class Task04 {
 
@@ -20,6 +20,7 @@ public class Task04 {
         // y = y - x;
         // y = y + x;
         // y = y + x;
+        // y = x / y;
         // y = y / x;
         // y = y * x;
 

@@ -1,4 +1,4 @@
-package lesson01.part1;
+﻿package lesson01.part1;
 
 public class Task08 {
 
@@ -28,6 +28,7 @@ public class Task08 {
 
     public static int getMetreFromCentimetre(int centimetre) {
         //напишите тут ваш код
+
         return 0;
     }
 }
