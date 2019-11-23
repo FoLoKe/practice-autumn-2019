@@ -1,4 +1,8 @@
-package com.javarush.task.task13.task1301.task09;
+package lesson05.part04.task09;
+
+import lesson05.part04.task09.BubblyWine;
+import lesson05.part04.task09.Drink;
+import lesson05.part04.task09.Wine;
 
 /**
  * Дегустация вин
@@ -22,22 +26,22 @@ package com.javarush.task.task13.task1301.task09;
  */
 
 public class Task09 {
-//    public static void main(String[] args) {
-//        getDeliciousDrink().taste();
-//        System.out.println(getWine().getHolidayName());
-//        System.out.println(getBubblyWine().getHolidayName());
-//        System.out.println(getWine().getHolidayName());
-//    }
-//
-//    public static Drink getDeliciousDrink() {
-//
-//    }
-//
-//    public static Wine getWine() {
-//
-//    }
-//
-//    public static Wine getBubblyWine() {
-//
-//    }
+    public static void main(String[] args) {
+        getDeliciousDrink().taste();
+        System.out.println(getWine().getHolidayName());
+        System.out.println(getBubblyWine().getHolidayName());
+        System.out.println(getWine().getHolidayName());
+    }
+
+    public static Drink getDeliciousDrink() {
+        return new Wine();
+    }
+
+    public static Wine getWine() {
+        return new Wine();
+    }
+
+    public static Wine getBubblyWine() {
+        return new BubblyWine();
+    }
 }

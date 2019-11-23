@@ -26,12 +26,28 @@ public class Task15 {
         public abstract Pet getChild();
     }
 
-    public static class Cat {
+    public static class Cat extends Pet{
+        @Override
+        public String getName() {
+            return null;
+        }
 
+        @Override
+        public Pet getChild() {
+            return null;
+        }
     }
 
-    public static class Dog {
+    public static class Dog extends Pet{
+        @Override
+        public String getName() {
+            return null;
+        }
 
+        @Override
+        public Pet getChild() {
+            return null;
+        }
     }
 
 }

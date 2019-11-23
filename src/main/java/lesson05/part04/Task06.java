@@ -38,6 +38,11 @@ public class Task06 {
 
     public static void haveFun(Person person) {
         //напишите тут ваш код
+        if (person instanceof Player) {
+            System.out.println("play");
+        } else if (person instanceof Dancer) {
+            System.out.println("dance");
+        }
     }
 
     interface Person {

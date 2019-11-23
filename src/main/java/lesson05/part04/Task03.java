@@ -1,5 +1,7 @@
 package lesson05.part04;
 
+import java.util.Scanner;
+
 /**
  * Коты
  * 1. Считывать строки(параметры) с консоли, пока пользователь не введет пустую строку(Enter).
@@ -20,6 +22,12 @@ package lesson05.part04;
 public class Task03 {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
+        Scanner scanner = new Scanner(System.in);
+        String inputString = "start";
+        while (!(inputString = scanner.nextLine()).equals("")) {
+            Cat cat = CatFactory.getCatByKey(inputString);
+            System.out.println(cat.toString());
+        }
     }
 
     static class CatFactory {

@@ -26,4 +26,15 @@ public class Task04 {
     }
 
     //напишите тут ваш класс
+    public static class Screen implements Selectable, Updatable {
+        @Override
+        public void onSelect() {
+
+        }
+
+        @Override
+        public void refresh() {
+
+        }
+    }
 }

@@ -17,7 +17,13 @@ import java.util.Map;
 
 public class Task14 {
     public static Map<Double, String> labels = new HashMap<Double, String>();
-
+    static {
+        labels.put(1d, "kek");
+        labels.put(2d, "топ");
+        labels.put(3d, "не нужны");
+        labels.put(4d, "FoLoKe");
+        labels.put(5d, "УБЕЙТЕ МЕНЯ");
+    }
     public static void main(String[] args) {
         System.out.println(labels);
     }

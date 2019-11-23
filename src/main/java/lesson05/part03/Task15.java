@@ -37,4 +37,45 @@ public class Task15 {
     public interface Eat {
         void eat();
     }
+
+    class Cat implements Movable, Eat, Edible {
+        @Override
+        public void move() {
+
+        }
+
+        @Override
+        public void eat() {
+
+        }
+
+        @Override
+        public void beEaten() {
+
+        }
+    }
+
+    class Mouse implements Movable, Edible{
+        @Override
+        public void beEaten() {
+
+        }
+
+        @Override
+        public void move() {
+
+        }
+    }
+
+    class Dog implements Movable, Eat {
+        @Override
+        public void eat() {
+
+        }
+
+        @Override
+        public void move() {
+
+        }
+    }
 }

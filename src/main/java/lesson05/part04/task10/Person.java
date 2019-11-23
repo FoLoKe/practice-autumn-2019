@@ -1,4 +1,4 @@
-package com.javarush.task.task13.task1301.task10;
+package lesson05.part04.task10;
 
 public interface Person {
     class User implements Person {

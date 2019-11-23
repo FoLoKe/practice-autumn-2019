@@ -25,15 +25,49 @@ public class Task26 {
 
     }
 
-    public class Cat {
+    public class Cat implements CanRun, CanClimb{
+        @Override
+        public void run() {
+
+        }
+
+        @Override
+        public void climb() {
+
+        }
     }
 
-    public class Dog {
+    public class Dog implements CanRun{
+        @Override
+        public void run() {
+
+        }
     }
 
-    public class Tiger extends Cat {
+    public class Tiger extends Cat{
     }
 
-    public class Duck {
+    public class Duck implements CanRun, CanFly{
+        @Override
+        public void run() {
+
+        }
+
+        @Override
+        public void fly() {
+
+        }
+    }
+
+    public interface CanFly {
+        public void fly();
+    }
+
+    public interface CanClimb {
+        public void climb();
+    }
+
+    public interface CanRun {
+        public void run();
     }
 }

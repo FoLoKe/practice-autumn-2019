@@ -16,12 +16,19 @@ package lesson05.part03;
  */
 
 public class Task22 {
-//    public static void main(String[] args) throws Exception {
-//        SimpleObject<String> stringObject = new StringObject<Object>();
-//    }
-//
-//    interface SimpleObject<T> {
-//        SimpleObject<T> getInstance();
-//    }
+    public static void main(String[] args) throws Exception {
+        SimpleObject<String> stringObject = new StringObject<Object>();
+    }
+
+    interface SimpleObject<T> {
+        SimpleObject<T> getInstance();
+    }
+
+    public static class StringObject<T> implements SimpleObject<String>{
+        @Override
+        public SimpleObject<String> getInstance() {
+            return new StringObject<String>();
+        }
+    }
 
 }

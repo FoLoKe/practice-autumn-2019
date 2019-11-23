@@ -20,5 +20,9 @@ public class Task23 {
     public static void main(String[] args) {
 
     }
+    Task23(int a){}
+    public Task23(float b){}
+    private Task23(double c){}
+    protected Task23(){}
 }
 

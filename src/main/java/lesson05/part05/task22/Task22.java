@@ -1,5 +1,9 @@
 package lesson05.part05.task22;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Закрепляем паттерн Singleton
  * 1. Найти пример реализации паттерна Singleton с ленивой реализацией(lazy initialization). Используй свой любимый поисковик(например google).
@@ -41,8 +45,27 @@ public class Task22 {
     public static Planet thePlanet;
 
     //add static block here - добавьте статический блок тут
+    static {
+        readKeyFromConsoleAndInitPlanet();
+    }
 
     public static void readKeyFromConsoleAndInitPlanet() {
         // implement step #5 here - реализуйте задание №5 тут
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            String key = bufferedReader.readLine();
+
+            if(key.equals(Planet.EARTH)) {
+                thePlanet = Earth.getInstance();
+            } else if (key.equals(Planet.MOON)) {
+                thePlanet = Moon.getInstance();
+            } else if (key.equals(Planet.SUN)) {
+                thePlanet = Sun.getInstance();
+            }
+
+            bufferedReader.close();
+        } catch (IOException e) {
+            System.out.println(e);
+        }
     }
 }

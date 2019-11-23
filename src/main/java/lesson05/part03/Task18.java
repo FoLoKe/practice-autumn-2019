@@ -1,5 +1,8 @@
 package lesson05.part03;
 
+import java.io.*;
+import java.util.Scanner;
+
 /**
  * Чтение файла
  * 1. Считать с консоли имя файла.
@@ -17,5 +20,24 @@ package lesson05.part03;
 public class Task18 {
     public static void main(String[] args) {
         // напишите тут ваш код
+        Scanner scanner = new Scanner(System.in);
+
+        File file = new File(scanner.nextLine());
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            try {
+                String s;
+                while((s = reader.readLine()) != null) {
+                    System.out.println(s);
+                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } finally {
+                reader.close();
+            }
+        } catch (IOException e) {
+            System.out.println("something wrong");
+        }
+
     }
 }

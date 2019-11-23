@@ -34,19 +34,51 @@ public class Task19 {
     }
 
 
-    public class Human {
+    public class Human implements CanRun, CanSwim {
+        @Override
+        public void swim() {
 
+        }
+
+        @Override
+        public void run() {
+
+        }
     }
 
-    public class Duck {
+    public class Duck implements CanSwim, CanFly, CanRun {
+        @Override
+        public void swim() {
 
+        }
+
+        @Override
+        public void run() {
+
+        }
+
+        @Override
+        public void fly() {
+
+        }
     }
 
-    public class Penguin {
+    public class Penguin implements CanRun, CanSwim {
+        @Override
+        public void swim() {
 
+        }
+
+        @Override
+        public void run() {
+
+        }
     }
 
-    public class Airplane {
+    public class Airplane implements CanFly{
+        @Override
+        public void fly() {
 
+        }
     }
 }

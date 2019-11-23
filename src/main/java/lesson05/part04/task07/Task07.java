@@ -1,5 +1,7 @@
 package lesson05.part04.task07;
 
+import static lesson05.part04.task07.Country.*;
+
 /**
  * Куриная фабрика
  * Написать Фабрику(Factory) по производству кур(Hen):
@@ -36,19 +38,33 @@ package lesson05.part04.task07;
  */
 
 public class Task07 {
-//    public static void main(String[] args) {
-//        Hen hen = HenFactory.getHen(Country.BELARUS);
-//        hen.getCountOfEggsPerMonth();
-//    }
-//
-//    static class HenFactory {
-//
-//        static Hen getHen(String country) {
-//            Hen hen = null;
-//            //напишите тут ваш код
-//            return hen;
-//        }
-//    }
+    public static void main(String[] args) {
+        Hen hen = HenFactory.getHen(Country.BELARUS);
+        hen.getCountOfEggsPerMonth();
+        System.out.println(hen.getDescription());
+    }
+
+    static class HenFactory {
+
+        static Hen getHen(String country) {
+            Hen hen = null;
+            //напишите тут ваш код
+            switch (country) {
+                case MOLDOVA:
+                    hen = new MoldovanHen();
+                    break;
+                case UKRAINE:
+                    hen = new UkrainianHen();
+                    break;
+                case BELARUS:
+                    hen = new BelarusianHen();
+                    break;
+                default:
+                    hen = new RussianHen();
+            }
+            return hen;
+        }
+    }
 
 
 }

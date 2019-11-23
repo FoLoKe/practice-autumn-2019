@@ -20,4 +20,15 @@ package lesson05.part03;
 public class Task08 {
     public static void main(String[] args) throws Exception {
     }
+
+    interface Person {
+        boolean isAlive();
+    }
+
+    class Presentable implements Person {
+        @Override
+        public boolean isAlive() {
+            return true;
+        }
+    }
 }

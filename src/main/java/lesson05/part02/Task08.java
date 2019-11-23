@@ -17,5 +17,20 @@ public class Task08 {
 
     }
 
+    public static void print(int input) {
+
+    }
+        public static void print(Integer input) {
+
+    }
+    public static void print(double input) {
+
+    }
+    public static void print(float input) {
+
+    }
+    public static void print(Float input) {
+
+    }
     //Напишите тут ваши методы
 }

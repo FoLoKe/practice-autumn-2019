@@ -26,26 +26,29 @@ import java.util.List;
  */
 
 public class Task16 {
-//    public static void main(String[] args) {
-//        Person ivan = new Person("Иван");
-//        for (Money money : ivan.getAllMoney()) {
-//            System.out.println(ivan.name + " имеет заначку в размере " + money.getAmount() + " " + money.getCurrencyName());
-//        }
-//    }
+    public static void main(String[] args) {
+        Person ivan = new Person("Иван");
+        for (Money money : ivan.getAllMoney()) {
+            System.out.println(ivan.name + " имеет заначку в размере " + money.getAmount() + " " + money.getCurrencyName());
+        }
+    }
 
-//    static class Person {
-//        public String name;
-//
-//        Person(String name) {
-//            this.name = name;
-//            this.allMoney = new ArrayList<Money>();
-//            //напишите тут ваш код
-//        }
-//
-//        private List<Money> allMoney;
-//
-//        public List<Money> getAllMoney() {
-//            return allMoney;
-//        }
-//    }
+    static class Person {
+        public String name;
+
+        Person(String name) {
+            this.name = name;
+            this.allMoney = new ArrayList<Money>();
+            //напишите тут ваш код
+            allMoney.add(new Hrivna(40));
+            allMoney.add(new Ruble(1000));
+            allMoney.add(new USD(5));
+        }
+
+        private List<Money> allMoney;
+
+        public List<Money> getAllMoney() {
+            return allMoney;
+        }
+    }
 }

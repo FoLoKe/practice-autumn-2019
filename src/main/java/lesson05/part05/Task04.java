@@ -36,8 +36,8 @@ import java.util.List;
 public class Task04 {
     public static void main(String[] args) {
         List<Book> books = new LinkedList<Book>();
-        //    books.add(new MarkTwainBook("Tom Sawyer"));
-        //   books.add(new AgathaChristieBook("Hercule Poirot"));
+        books.add(new MarkTwainBook("Tom Sawyer"));
+        books.add(new AgathaChristieBook("Hercule Poirot"));
         System.out.println(books);
     }
 
@@ -58,6 +58,12 @@ public class Task04 {
 
             String output = "output";
             //Add your code here
+            if (this instanceof AgathaChristieBook) {
+                return markTwainOutput;
+            }
+            else if (this instanceof MarkTwainBook){
+                return markTwainOutput;
+            }
 
             return output;
         }
@@ -65,5 +71,45 @@ public class Task04 {
         public String toString() {
             return getOutputByBookType();
         }
+    }
+
+    public static class MarkTwainBook extends Book {
+        private String book;
+        public MarkTwainBook(String book) {
+            super("Mark Twain");
+            this.book = book;
+        }
+
+        @Override
+        public MarkTwainBook getBook() {
+            return this;
+        }
+
+        @Override
+        public String getTitle() {
+            return book;
+        }
+
+
+    }
+
+    public static class AgathaChristieBook extends Book {
+        private String book;
+        public AgathaChristieBook(String book) {
+            super("Agatha Christie");
+            this.book = book;
+        }
+
+        @Override
+        public AgathaChristieBook getBook() {
+            return this;
+        }
+
+        @Override
+        public String getTitle() {
+            return book;
+        }
+
+
     }
 }

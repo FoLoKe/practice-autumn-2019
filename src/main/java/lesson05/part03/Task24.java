@@ -26,7 +26,7 @@ public class Task24 {
         Integer getAge();
     }
 
-    public static class Fox {
+    public abstract static class Fox implements Animal {
         public String getName() {
             return "Fox";
         }

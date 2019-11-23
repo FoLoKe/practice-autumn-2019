@@ -19,7 +19,7 @@ package lesson05.part01;
 public class Task19 {
     public static void main(String[] args) {
     }
-
+    ///WTF IS THIS SH*T????
     public class House {
 
     }

@@ -16,8 +16,16 @@ package lesson05.part02;
 
 public class Task07 {
     public static void main(String[] args) {
-
+        print(1);
+        print(new Integer(2));
     }
 
     //Напишите тут ваши методы
+    public static void print(int input) {
+        System.out.println(input);
+    }
+
+    public static void print(Integer input) {
+        System.out.println(input);
+    }
 }

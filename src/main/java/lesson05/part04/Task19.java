@@ -1,5 +1,8 @@
 package lesson05.part04;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /**
  * НОД
  * Наибольший общий делитель (НОД).
@@ -16,5 +19,15 @@ package lesson05.part04;
 
 public class Task19 {
     public static void main(String[] args) throws Exception {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(bufferedReader.readLine());
+        int b = Integer.parseInt(bufferedReader.readLine());
+        while (b !=0) {
+            int tmp = a%b;
+            a = b;
+            b = tmp;
+        }
+
+        System.out.println(a);
     }
 }
